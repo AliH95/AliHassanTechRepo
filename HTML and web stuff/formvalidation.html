@@ -1,0 +1,31 @@
+<html>
+
+<form action="www.bbc.co.uk" method="post" onsubmit="return check()"> <!-- when submitting, it will return whatever check returned, back to the DOM-->
+Name: <input id="name"> <span id="errorName" style="color:red;visibility:hidden"> ** </span> <br>
+Email: <input id="email"> <span id="errorEmail" style="color:red;visibility:hidden"> ** </span> <br>
+Address: <input id="address"> <span id="errorAddress" style="color:red;visibility:hidden"> ** </span> <br>
+<input type="Submit">
+</form>
+
+
+<script>
+function check(){
+let result=true;
+if (document.getElementById("name").value==""){ //no need to write window.document, just use document
+document.getElementById("errorName").style.visibility='visible'; //show the stars
+flag=false; //flag the result as false, so that it can't be submitted
+}
+
+if (document.getElementById("email").value==""){ //if the field is empty
+document.getElementById("errorEmail").style.visibility='visible'; //show the stars by changing the style to visible
+flag=false; //flag the result as false, so that it can't be submitted
+}
+
+if (document.getElementById("address").value==""){ //if the field is empty
+document.getElementById("errorAddress").style.visibility='visible'; //show the stars by changing the style to visible
+flag=false; //flag the result as false, so that it can't be submitted
+}
+return flag;
+}
+</script>
+</html>

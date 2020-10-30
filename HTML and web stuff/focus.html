@@ -1,0 +1,31 @@
+<html>
+
+First Number: <input id="no1"> <br>
+Second Number: <input id="no2"> <br>
+<input id="button1" type="button" value="+" onclick="addition()"> <br>
+Result: <input id="result">
+
+<script>
+
+let no1=window.document.getElementById("no1");
+let no2=window.document.getElementById("no2");
+let result=window.document.getElementById("result");
+
+function addition(){
+
+if(no1.value=="") { //if the textbox is empty
+alert ("Please enter first number!");
+no1.focus(); //function that focuses the cursor into that textbox
+}
+else {
+if(no2.value=="") { //if the textbox is empty
+alert ("Please enter second number!");
+no2.focus(); //function that focuses the cursor into that textbox
+}
+else{
+result.value=parseInt(no1.value)+parseInt(no1.value);
+}
+}
+}
+</script>
+</html>

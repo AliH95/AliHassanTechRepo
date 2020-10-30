@@ -1,0 +1,16 @@
+<html>
+
+<script>
+function Tony(){
+	let ref1 = window.document.getElementById("E1"); //we are retrieving the reference by calling the dom
+	let ref2 = window.document.getElementById("B1");
+	
+	ref1.value="Hello my friend JOHN";
+	ref2.value="Do not click again";
+	}
+</script>
+
+<input id="E1"> <!-- By default this is text box, since we did not specify the type field-->
+<input id="B1" type="button" value="click" onclick="Tony()">
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+First Number: <input id="no1"> <br>
+Second Number: <input id="no2"> <br>
+
+<input id="button1" type="button" value="+" onclick="addition()"> <!--im testing different event attributes-->
+<input id="button1" type="button" value="-" onclick="subtraction()"> 
+<input id="button1" type="button" value="x" onclick="multiplication()">
+<input id="button1" type="button" value="/" onclick="division()"> <br>
+
+Result: <input id="result">
+
+<script>
+
+let no1=window.document.getElementById("no1");
+let no2=window.document.getElementById("no2");
+let result=window.document.getElementById("result");
+
+function addition(){
+result.value=parseInt(no1.value)+parseInt(no2.value);
+// button1.type="checkbox"; //just testing
+}
+function subtraction(){
+result.value=parseInt(no1.value)-parseInt(no2.value);
+}
+function multiplication(){
+result.value=parseInt(no1.value)*parseInt(no2.value);
+}
+function division(){
+result.value=parseInt(no1.value)/parseInt(no2.value);
+}
+</script>
+</html>
